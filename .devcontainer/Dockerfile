@@ -2,14 +2,13 @@ FROM node:20
 
 # Install system deps
 RUN apt update && \
-    apt install -y python3 python3-pip curl git && \
-    pip3 install chromadb
+    apt install -y python3 python3-pip curl git
 
 # Install CLIs
-RUN npm install -g chroma-cli@latest flowise@3.0.0 concurrently
+RUN npm install -g flowise@3.0.0 concurrently
 
 # Create persistent data directory
-RUN mkdir -p /data/chroma /data/flowise
+RUN mkdir -p /data/flowise
 WORKDIR /workspace
 
 # Copy local config + startup script

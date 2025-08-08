@@ -3,12 +3,13 @@
 set -e
 export PATH="$HOME/.local/bin:$PATH"
 
-echo "[INFO] Starting Chroma (via Python) on port 8000..."
-chromadb run --path /data/chroma --host 0.0.0.0 --port 8000 &
+echo "[INFO] Starting Qdrant (via Docker) on port 6333..."
+docker run -d --name qdrant-server -p 6333:6333 -p 6334:6334 qdrant/qdrant &
 
-# Wait for Chroma to be ready
-until curl -s http://localhost:8000/api/v2/heartbeat >/dev/null; do
-  echo "[INFO] Waiting for Chroma..."
+
+# Wait for Qdrant to be ready
+until curl -s http://localhost:6333/collections >/dev/null; do
+  echo "[INFO] Waiting for Qdrant..."
   sleep 1
 done
 
