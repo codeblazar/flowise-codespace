@@ -1,0 +1,9 @@
+{
+  "name": "Flowise Codespace",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "forwardPorts": [7860, 8000],
+  "overrideCommand": false
+}

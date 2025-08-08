@@ -1,0 +1,12 @@
+{
+  "port": 7860,
+  "flowiseUsername": "admin",
+  "flowisePassword": "admin",
+  "databasePath": "/data/.flowise",
+  "logPath": "/data/.flowise/logs",
+  "tempUploadDir": "/data/uploads",
+  "chroma": {
+    "mode": "remote",
+    "url": "http://localhost:8000"
+  }
+}
