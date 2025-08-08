@@ -1,0 +1,51 @@
+nohup: ignoring input
+2025-08-08 05:24:39 [INFO]: Starting Flowise...
+2025-08-08 05:24:39 [INFO]: 📦 [server]: Data Source initialized successfully
+2025-08-08 05:24:39 [INFO]: 🔄 [server]: Database migrations completed successfully
+2025-08-08 05:24:39 [INFO]: 🔐 [server]: Identity Manager initialized successfully
+2025-08-08 05:24:40 [ERROR]: ❌ [server]: Error during initDatabase with file /home/codespace/.npm/_npx/8b95a19c5c9c8708/node_modules/flowise-components/dist/nodes/chatmodels/ChatFireworks/ChatFireworks.js: Class extends value undefined is not a constructor or null
+TypeError: Class extends value undefined is not a constructor or null
+    at Object.<anonymous> (/home/codespace/.npm/_npx/8b95a19c5c9c8708/node_modules/flowise-components/node_modules/@langchain/community/dist/chat_models/fireworks.cjs:429:38)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (/home/codespace/.npm/_npx/8b95a19c5c9c8708/node_modules/flowise-components/node_modules/@langchain/community/chat_models/fireworks.cjs:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-08-08 05:24:40 [ERROR]: ❌ [server]: Error during initDatabase with file /home/codespace/.npm/_npx/8b95a19c5c9c8708/node_modules/flowise-components/dist/nodes/chatmodels/ChatTogetherAI/ChatTogetherAI.js: Class extends value undefined is not a constructor or null
+TypeError: Class extends value undefined is not a constructor or null
+    at Object.<anonymous> (/home/codespace/.npm/_npx/8b95a19c5c9c8708/node_modules/flowise-components/node_modules/@langchain/community/dist/chat_models/togetherai.cjs:373:39)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (/home/codespace/.npm/_npx/8b95a19c5c9c8708/node_modules/flowise-components/node_modules/@langchain/community/chat_models/togetherai.cjs:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-08-08 05:24:42 [INFO]: 🔧 [server]: Nodes pool initialized successfully
+2025-08-08 05:24:42 [INFO]: ⏹️ [server]: Abort controllers pool initialized successfully
+2025-08-08 05:24:42 [INFO]: 🔑 [server]: Encryption key initialized successfully
+2025-08-08 05:24:42 [INFO]: 🚦 [server]: Rate limiters initialized successfully
+2025-08-08 05:24:42 [INFO]: 💾 [server]: Cache pool initialized successfully
+2025-08-08 05:24:42 [INFO]: 📊 [server]: Usage cache manager initialized successfully
+2025-08-08 05:24:42 [INFO]: 📈 [server]: Telemetry initialized successfully
+2025-08-08 05:24:42 [INFO]: 🌊 [server]: SSE Streamer initialized successfully
+2025-08-08 05:24:42 [INFO]: 🎉 [server]: All initialization steps completed successfully!
+2025-08-08 05:24:42 [INFO]: ⚡️ [server]: Flowise Server is listening at :7860
