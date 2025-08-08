@@ -1,9 +1,10 @@
+
 #!/bin/bash
 set -e
+export PATH="$HOME/.local/bin:$PATH"
 
-# Start Chroma server in background
-echo "[INFO] Starting Chroma on port 8000..."
-chroma run --path /data/chroma --host 0.0.0.0 --port 8000 &
+echo "[INFO] Starting Chroma (via Python) on port 8000..."
+chromadb run --path /data/chroma --host 0.0.0.0 --port 8000 &
 
 # Wait for Chroma to be ready
 until curl -s http://localhost:8000/api/v2/heartbeat >/dev/null; do
@@ -11,6 +12,5 @@ until curl -s http://localhost:8000/api/v2/heartbeat >/dev/null; do
   sleep 1
 done
 
-# Start Flowise in foreground
 echo "[INFO] Starting Flowise on port 7860..."
 npx flowise start --port 7860 --config ./flowise.json
