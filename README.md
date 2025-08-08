@@ -1,13 +1,11 @@
-# Flowise + Chroma in GitHub Codespaces
+# Flowise + Chroma in GitHub Codespaces
 
-## Steps to run
+### Usage
+1. Fork or clone this repo on GitHub.
+2. Click **Code > Open with Codespaces > New codespace**.
+3. Wait ~90 seconds for build and startup.
+4. In the **Ports** panel, open ports:
+   - **8000**: Chroma API (`/api/v2/heartbeat`)
+   - **7860**: Flowise UI (login `admin`/`admin`)
 
-1. Fork or clone this repository to your GitHub account.
-2. In GitHub, select **Code > Open with Codespaces > New codespace**.
-3. Wait 1–2 minutes for the container to build and services to start.
-4. In the **Ports** panel, click **7860** to open the Flowise UI, and **8000** to inspect the Chroma API.
-
-## Notes
-
-- `/data` persists across hibernation.
-- Back up your flows via the Flowise UI.
+All data persists under `/data` across Codespace sleeps.

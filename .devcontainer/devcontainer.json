@@ -1,9 +1,12 @@
 {
-  "name": "Flowise Codespace",
-  "build": {
-    "dockerfile": "Dockerfile",
-    "context": ".."
-  },
-  "forwardPorts": [7860, 8000],
-  "overrideCommand": false
+  "port": 7860,
+  "flowiseUsername": "admin",
+  "flowisePassword": "admin",
+  "databasePath": "/data/flowise",
+  "logPath": "/data/flowise/logs",
+  "tempUploadDir": "/data/flowise/uploads",
+  "chroma": {
+    "mode": "remote",
+    "url": "http://localhost:8000"
+  }
 }
