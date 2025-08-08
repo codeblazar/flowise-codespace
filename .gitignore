@@ -1,0 +1,12 @@
+# Flowise runtime data
+/data/
+
+# Node & environment
+node_modules/
+.npm/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store

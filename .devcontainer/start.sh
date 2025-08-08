@@ -14,4 +14,4 @@ until curl -s http://localhost:6333/collections >/dev/null; do
 done
 
 echo "[INFO] Starting Flowise on port 7860..."
-npx flowise start --port 7860 --config ./flowise.json
+npx flowise start --PORT 7860 --DATABASE_PATH ./data/.flowise --LOG_PATH ./data/.flowise/logs
