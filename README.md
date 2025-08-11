@@ -1,11 +1,8 @@
-## Configuring Flowise Credentials
+## Flowise Account Setup
 
-Before starting Flowise for the first time (or if you want to change your login credentials), run:
-```bash
-bash .devcontainer/configure-flowise.sh
-```
-This script will prompt you for your Flowise login email and password, and update your .env file accordingly. You can rerun it any time to change your password if you forget it.
+When you access Flowise for the first time in your browser, you will be prompted to set up your administrator account (name, email, and password) via the web UI. You do not need to pre-populate any credentials in the .env file.
 
+If you forget your password, use the password reset or recovery options in the Flowise UI.
 # Flowise Codespace (Flowise + Qdrant)
 
 This Codespace runs Flowise and Qdrant together, fully reproducibly.
