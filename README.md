@@ -35,28 +35,28 @@ This will stop and remove both Flowise and Qdrant containers. Wait for the scrip
 
 ---
 
+
 ## Accessing Flowise
-- Open your browser to: http://localhost:7860 (or use the Codespaces forwarded port)
-- Default login (if enabled):
-	- Username: `admin`
-	- Password: `admin`
+- When the script prints the access URL, open it in your browser. In GitHub Codespaces, the URL will look like:
+	- `https://<your-codespace-name>-7860.app.github.dev/`
+- You can also find this URL in the "Forwarded Address" column in the Ports tab.
+- Do not use `localhost`—it will not work from your local machine in Codespaces.
 
 ## Accessing Qdrant
-- Qdrant API: http://localhost:6333
+- Qdrant API: Use the forwarded address for port 6333, e.g. `https://<your-codespace-name>-6333.app.github.dev/`
 
 ## Data & Persistence
 - Flowise data: `./data/.flowise` (SQLite DB, logs, uploads)
 - Qdrant data: `./data/qdrant` (vector DB storage)
 - Both are volume-mounted for persistence and are ignored by git.
 
-## Stopping & Cleaning Up
-```bash
-# If using the script, just Ctrl+C to stop Flowise
-# To stop and remove containers (if using Docker Compose):
 docker compose down
-# Or manually:
 docker stop flowise qdrant-server
 docker rm flowise qdrant-server
+## Stopping & Cleaning Up
+To stop and remove both Flowise and Qdrant containers, run:
+```bash
+bash .devcontainer/stop.sh
 ```
 
 ## Troubleshooting
@@ -65,19 +65,7 @@ docker rm flowise qdrant-server
 
 ---
 
-## Data & persistence
-- Runtime data lives in `./data/.flowise` (SQLite DB, logs, uploads)
-- `data/` is ignored by Git to keep commits clean
-
-## Stop / clean
-```bash
-# Stop Flowise (Ctrl+C if running in foreground)
-# Remove Qdrant container if running
 docker rm -f qdrant-server 2>/dev/null || true
-```
 
-## Notes
-- Inside the Codespace/container, `localhost` refers to the dev container.
-- Your browser reaches it via Codespaces port forwarding.
-- Flowise CLI flags used: `--PORT`, `--DATABASE_PATH`, `--LOG_PATH`.
-- If you see Node version issues, use Node 20 (see `.nvmrc`).
+
+
