@@ -1,6 +1,9 @@
 # Flowise runtime data
 /data/
 
+# Devcontainer secrets
+.devcontainer/.env
+
 # Node & environment
 node_modules/
 .npm/

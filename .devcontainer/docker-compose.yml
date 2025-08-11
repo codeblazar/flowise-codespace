@@ -16,10 +16,8 @@ services:
       - qdrant
     ports:
       - "7860:7860"
-    environment:
-      - PORT=7860
-      - FLOWISE_USERNAME=admin
-      - FLOWISE_PASSWORD=admin
+    env_file:
+      - .env
     volumes:
       - ./data/.flowise:/data/.flowise
       - ./data/uploads:/data/uploads
