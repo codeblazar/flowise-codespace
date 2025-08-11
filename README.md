@@ -12,19 +12,22 @@ This Codespace runs Flowise and Qdrant together, fully reproducibly.
 
 You can start Flowise and Qdrant using either the provided script or Docker Compose.
 
+
 ### Option 1: Using the start script
 ```bash
 bash .devcontainer/start.sh
 ```
 This will:
-- Stop and remove any existing Qdrant container
-- Start Qdrant in Docker on ports 6333/6334 with persistent storage
-- Wait for Qdrant to be ready (you'll see repeated "[INFO] Waiting for Qdrant..." messages until it's up)
-- Start Flowise on port 7860 using local data at `./data/.flowise`
+- Stop and remove any running Flowise and Qdrant containers
+- Start both services using Docker Compose with settings from `.env`
+- Wait for Flowise to be ready (shows output until you see `Server is listening at ...`)
+- Tell you when you can access Flowise in your browser
 
 **Wait for:**
-- The message `[INFO] Starting Flowise on port 7860...` and then `🎉 [server]: All initialization steps completed successfully!`
-- If you see `Error: listen EADDRINUSE: address already in use :::7860`, make sure no other Flowise instance is running.
+- The script to print: `Server is listening at http://localhost:7860` (or your configured port)
+- Then open your browser to that URL (or use the Codespaces forwarded port)
+
+If you see `Error: listen EADDRINUSE: address already in use :::7860`, make sure no other Flowise instance is running.
 
 ### Option 2: Using Docker Compose
 ```bash
