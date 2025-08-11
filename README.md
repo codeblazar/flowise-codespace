@@ -1,6 +1,6 @@
 ## Flowise Account Setup
 
-When you access Flowise for the first time in your browser, you will be prompted to set up your administrator account (name, email, and password) via the web UI. You do not need to pre-populate any credentials in the .env file.
+When you access Flowise for the first time in your browser, you will be prompted to set up your administrator account (name, email, and password) via the web UI. 
 
 If you forget your password, use the password reset or recovery options in the Flowise UI.
 # Flowise Codespace (Flowise + Qdrant)
@@ -11,12 +11,6 @@ This Codespace runs Flowise and Qdrant together, fully reproducibly.
 - GitHub Codespaces (or VS Code Dev Containers)
 - Node.js 20 (pinned via `.nvmrc`)
 - Docker available in the Codespace (for Qdrant)
-
-
-## How to Start Flowise
-
-
-## How to Start and Stop Flowise
 
 ### Start the stack
 ```bash
