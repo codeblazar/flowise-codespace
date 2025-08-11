@@ -1,3 +1,11 @@
+## Configuring Flowise Credentials
+
+Before starting Flowise for the first time (or if you want to change your login credentials), run:
+```bash
+bash .devcontainer/configure-flowise.sh
+```
+This script will prompt you for your Flowise login email and password, and update your .env file accordingly. You can rerun it any time to change your password if you forget it.
+
 # Flowise Codespace (Flowise + Qdrant)
 
 This Codespace runs Flowise and Qdrant together, fully reproducibly.
@@ -10,34 +18,31 @@ This Codespace runs Flowise and Qdrant together, fully reproducibly.
 
 ## How to Start Flowise
 
-You can start Flowise and Qdrant using either the provided script or Docker Compose.
 
+## How to Start and Stop Flowise
 
-### Option 1: Using the start script
+### Start the stack
 ```bash
 bash .devcontainer/start.sh
 ```
 This will:
 - Stop and remove any running Flowise and Qdrant containers
-- Start both services using Docker Compose with settings from `.env`
-- Wait for Flowise to be ready (shows output until you see `Server is listening at ...`)
-- Tell you when you can access Flowise in your browser
+- Start both services with your settings from `.env`
+- Wait for Flowise to be ready
+- Print the correct URL to access Flowise when ready (in Codespaces, use the printed URL or the "Forwarded Address" in the Ports tab)
 
-**Wait for:**
-- The script to print: `Server is listening at http://localhost:7860` (or your configured port)
-- Then open your browser to that URL (or use the Codespaces forwarded port)
+**What to look for:**
+- Wait for the script to print: `[INFO] Flowise is ready! You can now access it at ...`
+- Open the printed URL in your browser (in Codespaces, it will look like `https://<your-codespace-name>-7860.app.github.dev/`)
+- If you see `Error: listen EADDRINUSE: address already in use :::7860`, make sure no other Flowise instance is running.
 
-If you see `Error: listen EADDRINUSE: address already in use :::7860`, make sure no other Flowise instance is running.
-
-### Option 2: Using Docker Compose
+### Stop the stack
 ```bash
-cd .devcontainer
-docker compose up -d
+bash .devcontainer/stop.sh
 ```
-This will start both Qdrant and Flowise as background containers.
+This will stop and remove both Flowise and Qdrant containers. Wait for the script to print `[INFO] All containers stopped and removed.`
 
-**Wait for:**
-- Run `docker compose logs -f flowise` and look for `🎉 [server]: All initialization steps completed successfully!`
+---
 
 ## Accessing Flowise
 - Open your browser to: http://localhost:7860 (or use the Codespaces forwarded port)

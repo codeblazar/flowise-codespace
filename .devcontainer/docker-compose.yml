@@ -21,7 +21,4 @@ services:
     volumes:
       - ./data/.flowise:/data/.flowise
       - ./data/uploads:/data/uploads
-    command: >
-      sh -lc "mkdir -p /data/.flowise/logs /data/uploads && \
-              flowise start --PORT 7860 --DATABASE_PATH /data/.flowise --LOG_PATH /data/.flowise/logs"
     restart: unless-stopped
